@@ -55,18 +55,6 @@ footer {
     }
   }
 
-  .footer__made-by {
-    padding-top: 3rem;
-    font-weight: 600;
-    text-align: center;
-    display: block;
-
-    @include mediaQuery(m) {
-      padding-top: 4rem;
-
-    }
-  }
-
   .footer__redes-sociais {
     display: flex;
     align-items: center;

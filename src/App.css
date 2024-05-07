@@ -45,7 +45,8 @@ ul {
   padding: 0 1rem;
 }
 .titulo {
-  font-size: 2.25rem;
+  max-width: 400px;
+  font-size: 2rem;
   color: black;
 }
 @media (max-width: 400px) {
@@ -296,8 +297,8 @@ main {
 }
 #entrada {
   position: relative;
-  background: url("../assets/blob-5.svg"), url("../assets/blob-4.svg"),
-    url("../assets/linhas-1.svg"), url("../assets/linhas-2.svg");
+  background: url("./assets/blob-5.svg"), url("./assets/blob-4.svg"),
+    url("./assets/linhas-1.svg"), url("./assets/linhas-2.svg");
   background-repeat: no-repeat;
   background-position: 25% top, 100%, top right, 27% 100%;
   background-size: auto;
@@ -554,44 +555,18 @@ main {
 }
 #valores .valores__lista li {
   display: flex;
+  gap: 1rem;
   align-items: center;
 }
-#valores .valores__lista li::before {
-  content: "";
-  background: #fcfaf0;
-  min-width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: block;
-  margin-right: 1rem;
+
+#valores .valores__lista li img {
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
 }
-#valores .valores__lista li:nth-of-type(odd)::before {
-  background: #e1ca53;
-}
-#valores .valores__lista li:nth-of-type(1)::before {
-  background-image: url("../assets/icon-ca-1.webp");
-  background-size: 2rem;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-#valores .valores__lista li:nth-of-type(2)::before {
-  background-image: url("../assets/icon-ca-2.webp");
-  background-size: 2rem;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-#valores .valores__lista li:nth-of-type(3)::before {
-  background-image: url("../assets/icon-ca-3.webp");
-  background-size: 2rem;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-#valores .valores__lista li:nth-of-type(4)::before {
-  background-image: url("../assets/icon-ca-4.webp");
-  background-size: 2rem;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 @media (max-width: 780px) {
   #valores .valores__lista li {
     flex-direction: column;
@@ -1216,23 +1191,14 @@ footer .footer__vet .titulo {
   display: block;
   font-weight: 600;
   line-height: 2.25rem;
+  color: white;
 }
 @media (max-width: 780px) {
   footer .footer__vet {
     text-align: center;
   }
 }
-footer .footer__made-by {
-  padding-top: 3rem;
-  font-weight: 600;
-  text-align: center;
-  display: block;
-}
-@media (max-width: 780px) {
-  footer .footer__made-by {
-    padding-top: 4rem;
-  }
-}
+
 footer .footer__redes-sociais {
   display: flex;
   align-items: center;

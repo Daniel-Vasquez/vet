@@ -18,7 +18,7 @@ import pro4 from "./assets/pro-4.webp";
 import imgSobre from "./assets/img-sobre.webp";
 import iconMenu from "./assets/icon-menu.svg";
 import iconMenuClose from "./assets/x-lg.svg";
-
+import iconCa1 from "./assets/icon-ca-1.webp";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,25 +75,25 @@ function App() {
         <nav className={`header__nav ${isOpen ? "ativo" : ""}`}>
           <ul>
             <li>
-              <a onClick={handleCloseMenu} href="/home">Home</a>
+              <a onClick={handleCloseMenu} href="/home">Inicio</a>
             </li>
             <li>
               <a onClick={handleCloseMenu} href="/consultas">Consultas</a>
             </li>
             <li>
-              <a onClick={handleCloseMenu} href="#">Exames</a>
+              <a onClick={handleCloseMenu} href="#">Exámenes</a>
             </li>
             <li>
               <a onClick={handleCloseMenu} href="#">Resultados</a>
             </li>
             <li>
-              <a onClick={handleCloseMenu} href="#">Agendar</a>
+              <a onClick={handleCloseMenu} href="#">Agendar cita</a>
             </li>
             <li>
-              <a onClick={handleCloseMenu} href="#">Sobre</a>
+              <a onClick={handleCloseMenu} href="#">Sobre nosotros</a>
             </li>
             <li>
-              <a onClick={handleCloseMenu} href="#">Contato</a>
+              <a onClick={handleCloseMenu} href="#">Contactos</a>
             </li>
           </ul>
         </nav>
@@ -113,40 +113,38 @@ function App() {
       <main>
         <section aria-label="entrada" id="entrada">
           <div className="entrada__container">
-            <span className="titulo">Vet</span>
+            <span className="titulo">Nombre de la Veterinaria/Clínica</span>
             <div className="entrada__textos">
-              <h1 className="titulo" data-anima="left" data-delay="200">
-                Curabitur feugiat
+              <h1 className="titulo">
+                El mejor soporte
                 <br />
-                mi vitae <span>eleifend</span> <br />
-                pharetra.
+                de atención para <span>tu mejor</span> <br />
+                amigo.
               </h1>
-              <p
-                className="entrada__paragrafo"
-                data-anima="left"
-                data-delay="400"
-              >
-                Mauris justo urna, maximus quis eros
+              <p className="entrada__paragrafo">
+                Aquí encontrarás respuesta a todas tus dudas, desde elegir la mejor comida
                 <br />
-                vel, blandit pellentesque purus
+                hasta consejos imprescindibles para garantizar el bienestar de
+                <br />
+                tu peludo compañero.
               </p>
-              <div className="entrada__btns" data-anima="left" data-delay="600">
+              <div className="entrada__btns">
                 <a href="#" className="btns btn-border">
                   <div className="bg-hover"></div>
-                  <p>Resultados</p>
+                  <p>Consulta</p>
                 </a>
                 <a href="#" className="btns btn-fill">
                   <div className="bg-hover"></div>
-                  <p>Agende uma visita</p>
+                  <p>Especialidades</p>
                 </a>
               </div>
             </div>
-            <div className="entrada__img" data-anima="translate-left">
+            <div className="entrada__img">
               <img src={imgBanner} alt="gato amarelo listrado" />
             </div>
             <address aria-label="endereço" className="entrada__endereco">
-              <span>Rua Lorem 123 - Ipsum</span>
-              <span>Lorem - IP</span>
+              <span>Dirección</span>
+              <span>Calle - Número</span>
             </address>
             <div
               aria-label="horario de funcionamento"
@@ -156,17 +154,17 @@ function App() {
             >
               <p className="entrada__aberto-fechado"></p>
               <div>
-                <p data-open="aberto">Segunda a sexta</p>
+                <p data-open="aberto">Lunes a Viernes</p>
                 <p>
-                  <time dateTime="08:00">8h:00</time> às
-                  <time dateTime="21:00">21h:00</time>
+                  <time dateTime="08:00">8h:00</time> a <time dateTime="21:00">21h:00</time>
                 </p>
               </div>
               <div>
-                <p>Sabado e domingo</p>
                 <p>
-                  <time dateTime="08:00">8h:00</time> às
-                  <time dateTime="16:00">16h:00</time>
+                  Sábado y Domingo
+                </p>
+                <p>
+                  Cerrado.
                 </p>
               </div>
             </div>
@@ -175,10 +173,22 @@ function App() {
         <section aria-label="valores" id="valores">
           <div className="container">
             <ul className="valores__lista">
-              <li>Etiam sed tristique massa</li>
-              <li>Nulla convallis nisi tellus, cursus mattis</li>
-              <li>Suspendisse aliquam ipsum eget nisi</li>
-              <li>Pellentesque id dignissim lorem</li>
+              <li>
+                <img src={iconCa1} alt="" />
+                Capacitación
+              </li>
+              <li>
+                <img src={iconCa1} alt="" />
+                Alimentación
+              </li>
+              <li>
+                <img src={iconCa1} alt="" />
+                Adopción
+              </li>
+              <li>
+                <img src={iconCa1} alt="" />
+                Salud
+              </li>
             </ul>
           </div>
         </section>
@@ -189,41 +199,43 @@ function App() {
         >
           <div className="container">
             <header className="especialidades__header" data-anima="left">
-              <h2 className="titulo especialidades__titulo">Especialidades</h2>
+              <h2 className="titulo especialidades__titulo">
+                Especialidades
+              </h2>
               <p className="padding-txt">
-                Donec viverra mauris quis
+                Nos dedicamos al cuidado de tu
                 <br />
-                elementum laoreet
+                mascota en las siguientes áreas.
               </p>
               <a href="#" className="btns btn-fill">
                 <div className="bg-hover"></div>
-                <p>Agende uma visita</p>
+                <p>Agendar una visita</p>
               </a>
             </header>
             <ul className="especialidades__lista">
               <li>
-                <a href="#">Clínica Geral</a>
+                <a href="#">Clínica General</a>
               </li>
               <li>
-                <a href="#">Nefrologia</a>
+                <a href="#">Nefrología</a>
               </li>
               <li>
-                <a href="#">Nutrição</a>
+                <a href="#">Nutrición</a>
               </li>
               <li>
-                <a href="#">Endocrinologia</a>
+                <a href="#">Endocrinología</a>
               </li>
               <li>
-                <a href="#">Dermatologia</a>
+                <a href="#">Dermatología</a>
               </li>
               <li>
-                <a href="#">Oncologia</a>
+                <a href="#">Oncología</a>
               </li>
               <li>
-                <a href="#">Cardiologia</a>
+                <a href="#">Cardiología</a>
               </li>
               <li>
-                <a href="#">Neurologia</a>
+                <a href="#">Neurología</a>
               </li>
               <li>
                 <a href="#">Acupuntura</a>
@@ -232,7 +244,7 @@ function App() {
                 <a href="#">Fisioterapia</a>
               </li>
               <li>
-                <a href="#">Odontologia</a>
+                <a href="#">Odontología</a>
               </li>
             </ul>
           </div>
@@ -247,35 +259,37 @@ function App() {
         >
           <div className="container">
             <header className="exames__header" data-anima="right">
-              <h2 className="titulo">Exames</h2>
+              <h2 className="titulo">
+                Exámenes
+              </h2>
               <p className="padding-txt">
-                Donec viverra mauris quis
+                Tenemos una amplia gama de
                 <br />
-                elementum laoreet
+                exámenes disponibles para tu mascota.
               </p>
               <a href="#" className="btns btn-border">
                 <div className="bg-hover"></div>
-                <p>Marque seu exame</p>
+                <p>Reserva tu examen</p>
               </a>
             </header>
             <ul className="exames__lista">
               <li>
-                <a href="#">Exame de sangue</a>
+                <a href="#">Examen de sangre</a>
               </li>
               <li>
-                <a href="#">Exame de urina</a>
+                <a href="#">Análisis de orina</a>
               </li>
               <li>
                 <a href="#">Ecocardiograma</a>
               </li>
               <li>
-                <a href="#">Ultrassonografia</a>
+                <a href="#">Ultrasonido</a>
               </li>
               <li>
-                <a href="#">Radiografia</a>
+                <a href="#">Radiografía</a>
               </li>
               <li>
-                <a href="#">Pressão arterial</a>
+                <a href="#">Presión arterial</a>
               </li>
             </ul>
           </div>
@@ -290,8 +304,7 @@ function App() {
         >
           <div className="container">
             <header data-anima="translate-up">
-              <h2 className="titulo">Conheça nossos profissionais</h2>
-              <p className="padding-txt">Mauris dignissim rhoncus erat</p>
+              <h2 className="titulo">Conoce a nuestros profesionales</h2>
             </header>
             <div className="profissionais__container-lista">
               {/* <div className="profissionais__btns-lista">
@@ -314,49 +327,49 @@ function App() {
                 <ul className="profissionais__lista">
                   <li>
                     <a href="#">
-                      <div className="profissionais__item-bg">Saiba mais</div>
+                      <div className="profissionais__item-bg">Saber más</div>
                       <div className="profissionais__img">
                         <img src={pro1} alt="Thaís" />
                       </div>
                       <div className="profissionais__infos">
-                        <p className="profissionais__nome">Thaís</p>
-                        <p>Veterinária</p>
+                        <p className="profissionais__nome">Nombre</p>
+                        <p>Profesión/Función</p>
                       </div>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <div className="profissionais__item-bg">Saiba mais</div>
+                      <div className="profissionais__item-bg">Saber más</div>
                       <div className="profissionais__img">
                         <img src={pro2} alt="Victor" />
                       </div>
                       <div className="profissionais__infos">
-                        <p className="profissionais__nome">Victor</p>
-                        <p>Veterinário</p>
+                        <p className="profissionais__nome">Nombre</p>
+                        <p>Profesión/Función</p>
                       </div>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <div className="profissionais__item-bg">Saiba mais</div>
+                      <div className="profissionais__item-bg">Saber más</div>
                       <div className="profissionais__img">
                         <img src={pro3} alt="Bianca" />
                       </div>
                       <div className="profissionais__infos">
-                        <p className="profissionais__nome">Bianca</p>
-                        <p>Veterinária</p>
+                        <p className="profissionais__nome">Nombre</p>
+                        <p>Profesión/Función</p>
                       </div>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <div className="profissionais__item-bg">Saiba mais</div>
+                      <div className="profissionais__item-bg">Saber más</div>
                       <div className="profissionais__img">
                         <img src={pro4} alt="Amanda" />
                       </div>
                       <div className="profissionais__infos">
-                        <p className="profissionais__nome">Amanda</p>
-                        <p>Enfermeira</p>
+                        <p className="profissionais__nome">Nombre</p>
+                        <p>Profesión/Función</p>
                       </div>
                     </a>
                   </li>
@@ -377,12 +390,11 @@ function App() {
         <section aria-label="sobre o Vet" id="sobre">
           <div className="container">
             <div className="sobre__txts padding-section" data-anima="left">
-              <h2 className="titulo">Sobre o Vet</h2>
+              <h2 className="titulo">Acerca de</h2>
               <p>
-                Nunc blandit nisl sit amet nibh fermentum interdum. Ut sagittis
-                feugiat dignissim. Proin tellus nisi, gravida vehicula sapien a,
-                cursus auctor lorem. Integer mattis urna sem, eu congue est
-                sagittis.
+                Somos una clínica veterinaria que se preocupa por la salud y el bienestar de tu mascota.
+                Nuestro equipo está formado por profesionales capacitados y apasionados por los animales.
+                Ven a conocernos y descubre todo lo que podemos hacer por tu mejor amigo.
               </p>
             </div>
             <div className="sobre__img" data-anima="translate-up">
@@ -400,20 +412,20 @@ function App() {
         >
           <div className="container">
             <header data-anima="translate-up">
-              <h2 className="titulo">Possui alguma dúvida?</h2>
-              <p className="padding-txt">Entre em contato com a gente!</p>
+              <h2 className="titulo">¿Tiene usted alguna pregunta?</h2>
+              <p className="padding-txt">¡Contáctenos!</p>
             </header>
             <div className="duvidas__container">
               <form action="#" className="duvidas__form">
                 <div className="duvidas__campo-form">
                   <label htmlFor="nome" className="duvidas__label">
-                    Seu nome
+                    Nombre
                   </label>
                   <input type="text" name="nome" id="nome" placeholder="Ana" />
                 </div>
                 <div className="duvidas__campo-form">
                   <label htmlFor="email" className="duvidas__label">
-                    Seu email
+                    Correo
                   </label>
                   <input
                     type="email"
@@ -424,51 +436,57 @@ function App() {
                 </div>
                 <div className="duvidas__campo-form">
                   <label htmlFor="assunto" className="duvidas__label">
-                    Assunto da mensagem
+                    Asunto
                   </label>
                   <input
                     type="text"
                     name="assunto"
                     id="assunto"
-                    placeholder="Sobre uma coisa..."
+                    placeholder="Consulta, cita, etc."
                   />
                 </div>
                 <div className="duvidas__campo-form">
                   <label htmlFor="mensagem" className="duvidas__label">
-                    Mensagem
+                    Mensaje
                   </label>
                   <textarea
                     name="mensagem"
                     id="mensagem"
                     cols="30"
                     rows="10"
-                    placeholder="Olá! Gostaria de saber mais sobre..."
+                    placeholder="Hola, me gustaría saber más sobre..."
                   ></textarea>
                 </div>
                 <button type="submit" className="btns btn-fill">
                   <div className="bg-hover"></div>
-                  <p>Enviar mensagem</p>
+                  <p>Enviar mensaje</p>
                 </button>
               </form>
               <address>
                 <div className="duvidas__campo-contato">
-                  <p className="duvidas__label">Endereço</p>
+                  <p className="duvidas__label">Dirección</p>
                   <div>
-                    Rua Lorem, 123 <br />
-                    Ipsum <br />
-                    12345-678, Lorem - IP <br />
+                    Av. <br />
+                    Calle. <br />
+                    Número, CP. <br />
                   </div>
                 </div>
                 <div className="duvidas__campo-contato">
-                  <p className="duvidas__label">Telefone</p>
-                  <div>+55 (00) 1234-5678</div>
+                  <p className="duvidas__label">
+                    Teléfono
+                  </p>
+                  <div>
+                    55 1234 5678
+                  </div>
                 </div>
                 <div className="duvidas__campo-contato">
-                  <p className="duvidas__label">Email para contato</p>
-                  <div>vets@email.com</div>
+                  <p className="duvidas__label">Correo</p>
+                  <div>correo@email.com</div>
                 </div>
                 <div className="duvidas__campo-contato">
-                  <p className="duvidas__label">Siga-nos</p>
+                  <p className="duvidas__label">
+                    Siguenos en
+                  </p>
                   <ul className="duvidas__redes-sociais">
                     <li>
                       <a href="#">
@@ -508,55 +526,61 @@ function App() {
         <div className="container">
           <div className="footer__infos">
             <nav className="footer__menu">
-              <p className="footer__titulos">Menu</p>
+              <p className="footer__titulos">
+                Menu
+              </p>
               <ul>
                 <li>
-                  <a href="#">Home</a>
+                  <a href="#">Inicio</a>
                 </li>
                 <li>
                   <a href="#">Consultas</a>
                 </li>
                 <li>
-                  <a href="#">Exames</a>
+                  <a href="#">Exámenes</a>
                 </li>
                 <li>
-                  <a href="#">Sobre</a>
+                  <a href="#">Sobre nosotros</a>
                 </li>
                 <li>
-                  <a href="#">Contato</a>
+                  <a href="#">Contacto</a>
                 </li>
                 <li>
                   <a href="#">Resultados</a>
                 </li>
                 <li>
-                  <a href="#">Agendar consulta</a>
+                  <a href="#">Agendar cita</a>
                 </li>
                 <li>
-                  <a href="#">Agendar exame</a>
+                  <a href="#">
+                    Agendar examen
+                  </a>
                 </li>
               </ul>
             </nav>
             <address>
               <div className="footer__address-item">
-                <p className="footer__titulos">Endereço</p>
+                <p className="footer__titulos">Dirección</p>
                 <div>
-                  Rua Lorem, 123 <br />
-                  Ipsum <br />
-                  12345-678, Lorem - IP <br />
+                  Av. <br />
+                  Calle. <br />
+                  Número, CP <br />
                 </div>
               </div>
               <div className="footer__address-item">
-                <p className="footer__titulos">Telefone</p>
-                <div>+55 (00) 1234-5678</div>
+                <p className="footer__titulos">Teléfono</p>
+                <div>55 1234 5678</div>
               </div>
             </address>
             <address>
               <div className="footer__address-item">
-                <p className="footer__titulos">Email</p>
-                <div>vets@email.com</div>
+                <p className="footer__titulos">Correo</p>
+                <div>correo@email.com</div>
               </div>
               <div className="footer__address-item">
-                <p className="footer__titulos">Siga-nos</p>
+                <p className="footer__titulos">
+                  Siguenos en
+                </p>
                 <ul className="footer__redes-sociais">
                   <li>
                     <a href="#">
@@ -580,18 +604,15 @@ function App() {
               </div>
             </address>
             <div className="footer__vet">
-              <span className="titulo">Vet</span>
+              <span className="titulo">
+                Veterinaria
+              </span>
               <p>
-                Donec quis mi justo. <br />
-                Proin id eros varius, <br />
-                fermentum dolor
+                Información<br />
+                adiccional <br />
               </p>
             </div>
           </div>
-          <span className="footer__made-by">
-            Projeto feito por
-            <a href="https://github.com/aridsm">Ariane Morelato</a>
-          </span>
         </div>
       </footer>
     </div>
