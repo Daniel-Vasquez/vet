@@ -75,10 +75,10 @@ function App() {
         <nav className={`header__nav ${isOpen ? "ativo" : ""}`}>
           <ul>
             <li>
-              <a onClick={handleCloseMenu} href="/home">Inicio</a>
+              <a onClick={handleCloseMenu} href="#">Inicio</a>
             </li>
             <li>
-              <a onClick={handleCloseMenu} href="/consultas">Consultas</a>
+              <a onClick={handleCloseMenu} href="#">Consultas</a>
             </li>
             <li>
               <a onClick={handleCloseMenu} href="#">Exámenes</a>
